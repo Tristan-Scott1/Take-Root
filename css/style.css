@@ -1,6 +1,7 @@
-body{
-    background-color:black
+body {
+    background-color: black
 }
+
 .myButtons {
     padding-top: 30vh;
     padding-left: 10vw;
@@ -43,8 +44,8 @@ body{
 
 .animation {
     min-width: 1080px;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -1;
     top: 50%;
