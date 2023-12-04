@@ -2,12 +2,12 @@ body{
     background-color:black
 }
 .myButtons {
+    padding-top: 30vh;
+    padding-left: 10vw;
     width: 2vw;
-    height: 100vw;
-    padding-left: 30vh;
-    padding-right: 30vh;
+    height: 20vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     position: relative;
 }
@@ -50,4 +50,25 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.seed {
+    width: 25vh;
+    height: 25vh;
+    position: relative;
+    animation: seed 2s ease-in-out infinite;
+}
+
+.sap {
+    width: 25vh;
+    height: 25vh;
+    position: relative;
+    animation: seed 2s ease-in-out infinite;
+}
+
+.adult {
+    width: 25vh;
+    height: 25vh;
+    position: relative;
+    animation: seed 2s ease-in-out infinite;
 }

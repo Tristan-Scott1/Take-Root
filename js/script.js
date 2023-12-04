@@ -1,3 +1,8 @@
+var mySeed = $('#seed');
+
+var mySap = $('#sap');
+
+var adult = $('#adult');
 
 var currentImageIndex = 1;
 
@@ -108,4 +113,41 @@ function startAnimate3() {
 function stopAnimate3() {
     stop3 = true;
 }
+//=======================================================
+
+mySeed.on('mouseover', function(){
+    const seedBut = document.getElementById('seed');
+    seedBut.src='/images/buttons/seedGreen.png';
+    mySeed.css('cursor', 'pointer');
+});
+
+mySeed.on('mouseout', function(){
+    const seedBut = document.getElementById('seed');
+    seedBut.src='/images/buttons/seedBlue.png';
+});
+
+mySap.on('mouseover', function(){
+    const sapBut = document.getElementById('sap');
+    sapBut.src='/images/buttons/sapGreen.png';
+    mySap.css('cursor', 'pointer');
+});
+
+mySap.on('mouseout', function(){
+    const sapBut = document.getElementById('sap');
+    sapBut.src='/images/buttons/sapBlue.png';
+});
+
+adult.on('mouseover', function(){
+    const adultBut = document.getElementById('adult');
+    adultBut.src='/images/buttons/adultGreen.png';
+    adult.css('cursor', 'pointer');
+});
+
+adult.on('mouseout', function(){
+    const adultBut = document.getElementById('adult');
+    adultBut.src='/images/buttons/adultBlue.png';
+});
+
+
+
 
