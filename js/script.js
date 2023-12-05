@@ -269,6 +269,7 @@ var playButton = document.getElementById('playAudio');
 
 playButton.addEventListener('click', function () {
     var ambientBirds = document.getElementById('myBirds');
+    
     if (ambientBirds.paused) {
         ambientBirds.volume = 0.3;
         ambientBirds.play();
@@ -284,3 +285,26 @@ playButton.addEventListener('click', function () {
         myMusic.pause();
     }
 });
+
+// var birdsButton = document.getElementById('onlyBirds');
+
+// birdsButton.addEventListener('click', function () {
+//     if (ambientBirds.paused) {
+//         ambientBirds.volume = 0.3;
+//         ambientBirds.play();
+//     } else {
+//         ambientBirds.pause();
+//     }
+// });
+
+// var musicButton = document.getElementById('Music');
+
+// musicButton.addEventListener('click', function () {
+//     if (myMusic.paused) {
+//         myMusic.volume = 0.3;
+//         myMusic.play();
+//     } else {
+//         myMusic.pause();
+//     }
+// });
+
