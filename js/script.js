@@ -1,8 +1,14 @@
+//=======================================================
+// BUTTON VARIABLES
+
 var mySeed = $('#seed');
 
 var mySap = $('#sap');
 
 var adult = $('#adult');
+
+//=======================================================
+// ANIMATION FRAME VARIABLES
 
 var currentImageIndex = 1;
 
@@ -12,13 +18,27 @@ var stop2 = false;
 
 var stop3 = false;
 
-function getCurrentIndexImage(value){
-    return  value;
+//=======================================================
+// AUDIO VARIABLES
+
+var myMusic = document.getElementById('mySong');
+var ambientBirds = document.getElementById('myBirds');
+var myTap = document.getElementById('tap');
+var myDig = document.getElementById('dig');
+var sapGrow = document.getElementById('sapGrow');
+var bigGrow = document.getElementById('bigGrow');
+
+
+//=======================================================
+// FUNCTIONS
+
+function getCurrentIndexImage(value) {
+    return value;
 }
 
 //=======================================================
 function animate1() {
-    if(stop1){
+    if (stop1) {
         return;
     }
     requestAnimationFrame(() => {
@@ -28,8 +48,8 @@ function animate1() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src='../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
-    if(currentImageIndex < 13){
+    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    if (currentImageIndex < 13) {
         currentImageIndex++;
     } else {
         currentImageIndex = 13;
@@ -49,7 +69,7 @@ function stopAnimate1() {
 }
 //=======================================================
 function animate2() {
-    if(stop2){
+    if (stop2) {
         return;
     }
     requestAnimationFrame(() => {
@@ -59,8 +79,8 @@ function animate2() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src='../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
-    if(currentImageIndex < 35){
+    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    if (currentImageIndex < 35) {
         currentImageIndex++;
     } else {
         currentImageIndex = 35;
@@ -69,7 +89,7 @@ function animate2() {
 
 function startAnimate2() {
     currentImageIndex = 13;
-    stopAnimate1(); 
+    stopAnimate1();
     stopAnimate3();
     stop2 = false;
     animate2();
@@ -79,9 +99,9 @@ function stopAnimate2() {
 }
 //=======================================================
 function animate3() {
-    if(stop3){
+    if (stop3) {
         return;
-    }  
+    }
     requestAnimationFrame(() => {
         setTimeout(() => {
             animate3();
@@ -89,8 +109,8 @@ function animate3() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src='../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
-    if(currentImageIndex < 53){
+    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    if (currentImageIndex < 53) {
         currentImageIndex++;
     } else {
         currentImageIndex = 53;
@@ -98,10 +118,10 @@ function animate3() {
 }
 
 function startAnimate3() {
-    if(currentImageIndex <= 13){
+    if (currentImageIndex <= 13) {
         currentImageIndex = 13;
     }
-    else{
+    else {
         currentImageIndex = 35;
     }
     stopAnimate1();
@@ -115,39 +135,91 @@ function stopAnimate3() {
 }
 //=======================================================
 
-mySeed.on('mouseover', function(){
+mySeed.on('mouseover', function () {
     const seedBut = document.getElementById('seed');
-    seedBut.src='/images/buttons/seedGreen.png';
+    seedBut.src = '/images/buttons/seedGreen.png';
     mySeed.css('cursor', 'pointer');
+
+    myTap.volume = 0.1;
+    myTap.play();
+
 });
 
-mySeed.on('mouseout', function(){
+mySeed.on('mouseout', function () {
     const seedBut = document.getElementById('seed');
-    seedBut.src='/images/buttons/seedBlue.png';
+    seedBut.src = '/images/buttons/seedBlue.png';
 });
 
-mySap.on('mouseover', function(){
+mySeed.on('click', function () {
+    myDig.volume = 0.1;
+    myDig.play();
+    startAnimate1();
+});
+
+mySap.on('mouseover', function () {
     const sapBut = document.getElementById('sap');
-    sapBut.src='/images/buttons/sapGreen.png';
+    sapBut.src = '/images/buttons/sapGreen.png';
     mySap.css('cursor', 'pointer');
+
+    myTap.volume = 0.1;
+    myTap.play();
+
 });
 
-mySap.on('mouseout', function(){
+mySap.on('mouseout', function () {
     const sapBut = document.getElementById('sap');
-    sapBut.src='/images/buttons/sapBlue.png';
+    sapBut.src = '/images/buttons/sapBlue.png';
 });
 
-adult.on('mouseover', function(){
+mySap.on('click', function () {
+    sapGrow.volume = 0.1;
+    sapGrow.play();
+    startAnimate2();
+});
+
+adult.on('mouseover', function () {
     const adultBut = document.getElementById('adult');
-    adultBut.src='/images/buttons/adultGreen.png';
+    adultBut.src = '/images/buttons/adultGreen.png';
     adult.css('cursor', 'pointer');
+
+    myTap.volume = 0.1;
+    myTap.play();
+
 });
 
-adult.on('mouseout', function(){
+adult.on('mouseout', function () {
     const adultBut = document.getElementById('adult');
-    adultBut.src='/images/buttons/adultBlue.png';
+    adultBut.src = '/images/buttons/adultBlue.png';
 });
 
+adult.on('click', function () {
+
+    if (currentImageIndex <= 13) {
+        sapGrow.volume = 0.1;
+        sapGrow.play();
+
+        setTimeout(() => {
+            bigGrow.volume = 0.1;
+            bigGrow.play();
+        }, 2800);
+    }
+    else {
+        bigGrow.volume = 0.1;
+        bigGrow.play();
+    }
+    startAnimate3();
+});
+//=======================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+    ambientBirds.volume = 0.1;
+    ambientBirds.play();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    myMusic.volume = 0.05;
+    myMusic.play();
+});
 
 
 
