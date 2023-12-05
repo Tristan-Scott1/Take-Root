@@ -1,4 +1,9 @@
 //=======================================================
+
+//  Author: Tristan Scott
+//  Date: 2023/12/04
+
+//=======================================================
 // BUTTON VARIABLES
 
 var mySeed = $('#seed');
@@ -37,6 +42,8 @@ function getCurrentIndexImage(value) {
 }
 
 //=======================================================
+// PLANT SEED ANIMATION
+
 function animate1() {
     if (stop1) {
         return;
@@ -68,6 +75,8 @@ function stopAnimate1() {
     stop1 = true;
 }
 //=======================================================
+// GROW SAPLING ANIMATION
+
 function animate2() {
     if (stop2) {
         return;
@@ -98,6 +107,8 @@ function stopAnimate2() {
     stop2 = true;
 }
 //=======================================================
+// GROW ADULT ANIMATION
+
 function animate3() {
     if (stop3) {
         return;
@@ -134,6 +145,7 @@ function stopAnimate3() {
     stop3 = true;
 }
 //=======================================================
+// SEED BUTTON
 
 mySeed.on('mouseover', function () {
     const seedBut = document.getElementById('seed');
@@ -157,6 +169,7 @@ mySeed.on('click', function () {
 });
 
 //=======================================================
+// SAPLING BUTTON
 
 mySap.on('mouseover', function () {
     const sapBut = document.getElementById('sap');
@@ -180,6 +193,7 @@ mySap.on('click', function () {
 });
 
 //=======================================================
+// ADULT BUTTON
 
 adult.on('mouseover', function () {
     const adultBut = document.getElementById('adult');
@@ -226,6 +240,7 @@ adult.on('click', function () {
 // });
 
 //=======================================================
+// AUDIO SCRIPT
 
 ambientBirds.addEventListener('canplaythrough', function() {
     ambientBirds.volume = 0.3;
