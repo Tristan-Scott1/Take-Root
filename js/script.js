@@ -48,7 +48,7 @@ function animate1() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    image.src = '/images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
     if (currentImageIndex < 13) {
         currentImageIndex++;
     } else {
@@ -79,7 +79,7 @@ function animate2() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    image.src = '/images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
     if (currentImageIndex < 35) {
         currentImageIndex++;
     } else {
@@ -109,7 +109,7 @@ function animate3() {
     });
 
     const image = document.getElementById('imageRender');
-    image.src = '../images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
+    image.src = '/images/Asn-' + getCurrentIndexImage(currentImageIndex) + '.png';
     if (currentImageIndex < 53) {
         currentImageIndex++;
     } else {
@@ -137,7 +137,7 @@ function stopAnimate3() {
 
 mySeed.on('mouseover', function () {
     const seedBut = document.getElementById('seed');
-    seedBut.src = '../images/buttons/seedGreen.png';
+    seedBut.src = '/images/buttons/seedGreen.png';
     mySeed.css('cursor', 'pointer');
 
     myTap.volume = 0.1;
@@ -147,7 +147,7 @@ mySeed.on('mouseover', function () {
 
 mySeed.on('mouseout', function () {
     const seedBut = document.getElementById('seed');
-    seedBut.src = '../images/buttons/seedBlue.png';
+    seedBut.src = '/images/buttons/seedBlue.png';
 });
 
 mySeed.on('click', function () {
@@ -160,7 +160,7 @@ mySeed.on('click', function () {
 
 mySap.on('mouseover', function () {
     const sapBut = document.getElementById('sap');
-    sapBut.src = '../images/buttons/sapGreen.png';
+    sapBut.src = '/images/buttons/sapGreen.png';
     mySap.css('cursor', 'pointer');
 
     myTap.volume = 0.1;
@@ -170,7 +170,7 @@ mySap.on('mouseover', function () {
 
 mySap.on('mouseout', function () {
     const sapBut = document.getElementById('sap');
-    sapBut.src = '../images/buttons/sapBlue.png';
+    sapBut.src = '/images/buttons/sapBlue.png';
 });
 
 mySap.on('click', function () {
@@ -183,7 +183,7 @@ mySap.on('click', function () {
 
 adult.on('mouseover', function () {
     const adultBut = document.getElementById('adult');
-    adultBut.src = '../images/buttons/adultGreen.png';
+    adultBut.src = '/images/buttons/adultGreen.png';
     adult.css('cursor', 'pointer');
 
     myTap.volume = 0.1;
@@ -193,7 +193,7 @@ adult.on('mouseover', function () {
 
 adult.on('mouseout', function () {
     const adultBut = document.getElementById('adult');
-    adultBut.src = '../images/buttons/adultBlue.png';
+    adultBut.src = '/images/buttons/adultBlue.png';
 });
 
 adult.on('click', function () {
