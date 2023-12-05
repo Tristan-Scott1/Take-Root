@@ -221,5 +221,15 @@ document.addEventListener('DOMContentLoaded', function () {
     myMusic.play();
 });
 
+//=======================================================
+var musicElement = document.getElementById('myMusic');
+musicElement.addEventListener('canplaythrough', function() {
+    musicElement.play();
+});
+
+var birdsElement = document.getElementById('myBirds');
+birdsElement.addEventListener('canplaythrough', function() {
+    birdsElement.play();
+});
 
 
