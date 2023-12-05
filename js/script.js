@@ -265,46 +265,46 @@ myMusic.addEventListener('canplaythrough', function () {
 
 //=======================================================
 
-var playButton = document.getElementById('playAudio');
+// var playButton = document.getElementById('playAudio');
 
-playButton.addEventListener('click', function () {
-    var ambientBirds = document.getElementById('myBirds');
+// playButton.addEventListener('click', function () {
+//     var ambientBirds = document.getElementById('myBirds');
     
-    if (ambientBirds.paused) {
-        ambientBirds.volume = 0.3;
-        ambientBirds.play();
-    } else {
-        ambientBirds.pause();
-    }
-
-    var myMusic = document.getElementById('mySong');
-    if (myMusic.paused) {
-        myMusic.volume = 0.1;
-        myMusic.play();
-    } else {
-        myMusic.pause();
-    }
-});
-
-// var birdsButton = document.getElementById('onlyBirds');
-
-// birdsButton.addEventListener('click', function () {
 //     if (ambientBirds.paused) {
 //         ambientBirds.volume = 0.3;
 //         ambientBirds.play();
 //     } else {
 //         ambientBirds.pause();
 //     }
-// });
 
-// var musicButton = document.getElementById('Music');
-
-// musicButton.addEventListener('click', function () {
+//     var myMusic = document.getElementById('mySong');
 //     if (myMusic.paused) {
-//         myMusic.volume = 0.3;
+//         myMusic.volume = 0.1;
 //         myMusic.play();
 //     } else {
 //         myMusic.pause();
 //     }
 // });
+
+var birdsButton = document.getElementById('onlyBirds');
+
+birdsButton.addEventListener('click', function () {
+    if (ambientBirds.paused) {
+        ambientBirds.volume = 0.3;
+        ambientBirds.play();
+    } else {
+        ambientBirds.pause();
+    }
+});
+
+var musicButton = document.getElementById('Music');
+
+musicButton.addEventListener('click', function () {
+    if (myMusic.paused) {
+        myMusic.volume = 0.3;
+        myMusic.play();
+    } else {
+        myMusic.pause();
+    }
+});
 
