@@ -4,6 +4,11 @@
 //  Date: 2023/12/04
 
 //=======================================================
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// VARIABLES
+
+//=======================================================
 // BUTTON VARIABLES
 
 var mySeed = $('#seed');
@@ -27,14 +32,19 @@ var stop3 = false;
 // AUDIO VARIABLES
 
 var myMusic = document.getElementById('mySong');
+
 var ambientBirds = document.getElementById('myBirds');
+
 var myTap = document.getElementById('tap');
+
 var myDig = document.getElementById('dig');
+
 var sapGrow = document.getElementById('sapGrow');
+
 var bigGrow = document.getElementById('bigGrow');
 
 
-//=======================================================
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // FUNCTIONS
 
 function getCurrentIndexImage(value) {
@@ -242,13 +252,13 @@ adult.on('click', function () {
 //=======================================================
 // AUDIO SCRIPT
 
-ambientBirds.addEventListener('canplaythrough', function() {
+ambientBirds.addEventListener('canplaythrough', function () {
     ambientBirds.volume = 0.3;
     ambientBirds.play();
 });
 
 
-myMusic.addEventListener('canplaythrough', function() {
+myMusic.addEventListener('canplaythrough', function () {
     myMusic.volume = 0.1;
     myMusic.play();
 });
@@ -257,7 +267,7 @@ myMusic.addEventListener('canplaythrough', function() {
 
 var playButton = document.getElementById('playAudio');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', function () {
     var ambientBirds = document.getElementById('myBirds');
     if (ambientBirds.paused) {
         ambientBirds.volume = 0.3;
