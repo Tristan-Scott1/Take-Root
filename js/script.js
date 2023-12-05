@@ -140,7 +140,7 @@ mySeed.on('mouseover', function () {
     seedBut.src = 'images/buttons/seedGreen.png';
     mySeed.css('cursor', 'pointer');
 
-    myTap.volume = 0.1;
+    myTap.volume = 0.2;
     myTap.play();
 
 });
@@ -151,7 +151,7 @@ mySeed.on('mouseout', function () {
 });
 
 mySeed.on('click', function () {
-    myDig.volume = 0.1;
+    myDig.volume = 0.2;
     myDig.play();
     startAnimate1();
 });
@@ -163,7 +163,7 @@ mySap.on('mouseover', function () {
     sapBut.src = 'images/buttons/sapGreen.png';
     mySap.css('cursor', 'pointer');
 
-    myTap.volume = 0.1;
+    myTap.volume = 0.2;
     myTap.play();
 
 });
@@ -174,7 +174,7 @@ mySap.on('mouseout', function () {
 });
 
 mySap.on('click', function () {
-    sapGrow.volume = 0.1;
+    sapGrow.volume = 0.2;
     sapGrow.play();
     startAnimate2();
 });
@@ -186,7 +186,7 @@ adult.on('mouseover', function () {
     adultBut.src = 'images/buttons/adultGreen.png';
     adult.css('cursor', 'pointer');
 
-    myTap.volume = 0.1;
+    myTap.volume = 0.2;
     myTap.play();
 
 });
@@ -199,16 +199,16 @@ adult.on('mouseout', function () {
 adult.on('click', function () {
 
     if (currentImageIndex <= 13) {
-        sapGrow.volume = 0.1;
+        sapGrow.volume = 0.2;
         sapGrow.play();
 
         setTimeout(() => {
-            bigGrow.volume = 0.1;
+            bigGrow.volume = 0.2;
             bigGrow.play();
         }, 2900);
     }
     else {
-        bigGrow.volume = 0.1;
+        bigGrow.volume = 0.2;
         bigGrow.play();
     }
     startAnimate3();
@@ -228,13 +228,13 @@ adult.on('click', function () {
 //=======================================================
 
 ambientBirds.addEventListener('canplaythrough', function() {
-    ambientBirds.volume = 0.1;
+    ambientBirds.volume = 0.3;
     ambientBirds.play();
 });
 
 
 myMusic.addEventListener('canplaythrough', function() {
-    myMusic.volume = 0.05;
+    myMusic.volume = 0.1;
     myMusic.play();
 });
 
@@ -245,13 +245,13 @@ var playButton = document.getElementById('playAudio');
 playButton.addEventListener('click', function() {
     var ambientBirds = document.getElementById('myBirds');
     if (ambientBirds.paused) {
-        ambientBirds.volume = 0.1;
+        ambientBirds.volume = 0.3;
         ambientBirds.play();
     }
 
     var myMusic = document.getElementById('mySong');
     if (myMusic.paused) {
-        myMusic.volume = 0.05;
+        myMusic.volume = 0.1;
         myMusic.play();
     }
 });
