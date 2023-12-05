@@ -96,3 +96,76 @@
 
     cursor: pointer;
 }
+
+@media screen and (max-width: 1000px ){
+
+    
+    #imageRender {
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+    }
+
+    .myButtons{
+        padding-top: 10vh;
+        padding-left: 20vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        left:17vh
+    }
+
+
+}
+
+@media screen and (max-width: 540px ) {
+    .animation{   
+        left:-100px;
+        
+        width: 100vh;
+
+        height: 130vh;
+    }
+
+    body{
+        background-color: black;
+    }
+    .seed {
+        width: 15vh;
+        height: 15vh;
+        position: relative;
+        animation: seed 2s ease-in-out infinite;
+    }
+    
+    .sap {
+        width: 15vh;
+        height: 15vh;
+        position: relative;
+        animation: seed 2s ease-in-out infinite;
+    }
+    
+    .adult {
+        width: 15vh;
+        height: 15vh;
+        position: relative;
+        animation: seed 2s ease-in-out infinite;
+    }
+    .myButtons{
+        padding-top: 5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        left:13vh;
+    }
+    .minimal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        left:20vh
+    }
+    #imageRender {
+        width: 100vh;
+        height: 130vh;
+        position:absolute;
+    }
+ }
