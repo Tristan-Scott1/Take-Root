@@ -247,11 +247,15 @@ playButton.addEventListener('click', function() {
     if (ambientBirds.paused) {
         ambientBirds.volume = 0.3;
         ambientBirds.play();
+    } else {
+        ambientBirds.pause();
     }
 
     var myMusic = document.getElementById('mySong');
     if (myMusic.paused) {
         myMusic.volume = 0.1;
         myMusic.play();
+    } else {
+        myMusic.pause();
     }
 });
