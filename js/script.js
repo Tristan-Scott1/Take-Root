@@ -31,6 +31,10 @@ var stop3 = false;
 //=======================================================
 // AUDIO VARIABLES
 
+var musicText = $('#Music');
+
+var ambientText = $('#onlyBirds');
+
 var myMusic = document.getElementById('mySong');
 
 var ambientBirds = document.getElementById('myBirds');
@@ -295,3 +299,28 @@ musicButton.addEventListener('click', function () {
     }
 });
 
+let musicSwitch = 0;
+    musicText.on('click', function() {
+        if(musicSwitch == 1) {
+            musicText.empty();
+            musicSwitch = 0;
+            musicText.append('Music (on)');
+        } else if(musicSwitch == 0) {
+            musicText.empty();
+            musicSwitch = 1;
+            musicText.append('Music (off)');
+        }
+    });
+
+    let ambSwitch = 0;
+    ambientText.on('click', function() {
+        if(ambSwitch == 1) {
+            ambientText.empty();
+            ambSwitch = 0;
+            ambientText.append('Ambience (on)');
+        } else if(ambSwitch == 0) {
+            ambientText.empty();
+            ambSwitch = 1;
+            ambientText.append('Ambience (off)');
+        }
+    });
