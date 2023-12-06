@@ -281,46 +281,28 @@ var birdsButton = document.getElementById('onlyBirds');
 
 birdsButton.addEventListener('click', function () {
     if (ambientBirds.paused) {
-        // ambientBirds.volume = 0.5;
+        ambientText.empty();
+        ambientBirds.volume = 0.5;
         ambientBirds.play();
+        ambientText.append('Ambience (on)');
     } else {
+        ambientText.empty();
         ambientBirds.pause();
+        ambientText.append('Ambience (off)');
     }
 });
 
 var musicButton = document.getElementById('Music');
 
 musicButton.addEventListener('click', function () {
-    if (myMusic.paused) {
+    if (myMusic.paused) { 
         myMusic.volume = 0.3;
         myMusic.play();
+        musicText.empty();
+        musicText.append('Music (on)');
     } else {
         myMusic.pause();
+        musicText.empty();
+        musicText.append('Music (off)');
     }
 });
-
-let musicSwitch = 0;
-    musicText.on('click', function() {
-        if(musicSwitch == 1) {
-            musicText.empty();
-            musicSwitch = 0;
-            musicText.append('Music (on)');
-        } else if(musicSwitch == 0) {
-            musicText.empty();
-            musicSwitch = 1;
-            musicText.append('Music (off)');
-        }
-    });
-
-    let ambSwitch = 0;
-    ambientText.on('click', function() {
-        if(ambSwitch == 1) {
-            ambientText.empty();
-            ambSwitch = 0;
-            ambientText.append('Ambience (on)');
-        } else if(ambSwitch == 0) {
-            ambientText.empty();
-            ambSwitch = 1;
-            ambientText.append('Ambience (off)');
-        }
-    });
